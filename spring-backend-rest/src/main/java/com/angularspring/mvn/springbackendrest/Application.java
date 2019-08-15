@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication//-->@SpringBootconfigration + @EnableAutoConfigration + @ComponentScan
-public class DemoApplication{
+public class Application{
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 	@Bean
@@ -19,7 +19,7 @@ public class DemoApplication{
                 User user = new User(name, name.toLowerCase() + "@domain.com");
                 userRepository.save(user);
             });
-            userRepository.findAll().forEach(System.out::println);
+        
         };
 	}
 	
