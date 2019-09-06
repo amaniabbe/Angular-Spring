@@ -4,7 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,10 +20,10 @@ import java.util.List;
 class DemoApplicationTests {
 
 	UserRepository repositoryMock = Mockito.mock(UserRepository.class);
-	List<User> users = new ArrayList<>();
+	List<User> users = new LinkedList<>();
 	
 
-	@BeforeAll
+	@Before
 	 void setup(){
 		System.out.println("@Beforeall executed");
 		User user = new User();
@@ -31,10 +33,7 @@ class DemoApplicationTests {
 		users.add(user);
 	 }
 
-	@BeforeEach
-	 void setupEach(){
-		System.out.println("@BeforeAll executed");
-	}
+
 
 	@Test
 	void contextLoads() {

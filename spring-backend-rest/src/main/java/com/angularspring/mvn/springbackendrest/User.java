@@ -1,9 +1,14 @@
 package com.angularspring.mvn.springbackendrest;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+
 
 @Entity
 public class User{
@@ -12,6 +17,7 @@ public class User{
     private long id;
     private String name;
     private String email;
+
 
     @Override
     public String toString(){
